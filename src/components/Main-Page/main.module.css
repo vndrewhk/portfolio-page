@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(176, 255, 229);
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+}
+
+.paragraph {
+  width: 25vw;
+  text-align: left;
+  border: red 1px solid;
+  border-radius: 3px;
+  background-color: aquamarine;
+}
+
+.card-box {
+  margin-right: 10%;
+  margin-left: 10%;
+  border: 5px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: red;
+  color: burlywood;
+  width: 10vw;
+  padding: 5%;
+  margin: 5%;
+}
