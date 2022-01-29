@@ -1,4 +1,5 @@
 import { Button, Card } from "@mui/material";
+import Projects from "../Projects/Projects";
 import styles from "./main.module.css";
 
 const Main = () => {
@@ -12,16 +13,7 @@ const Main = () => {
         </p1>
       </div>
 
-      {/* variant	'contained' */}
-      {/* | 'outlined' */}
-      {/* | 'text' */}
-      {/* | string */}
-
-      <div className={styles["card-box"]}>
-        <Card className={styles.card}>Project 1</Card>
-        <Card className={styles.card}>Project 2</Card>
-        <Card className={styles.card}>Project 3</Card>
-      </div>
+     {/* <Projects></Projects> */}
     </div>
   );
 };

@@ -5,14 +5,16 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className={styles.header}>
       {/*  <div className = {styles['header-box']}> */}
-      <Typography variant="h3" component="h2">
+      <NavLink to ="/" style={{ textDecoration: 'none' }}>
+      <Typography variant="h3" component="h2" className = {styles.logo}>
         Andrew 
-      </Typography>
+      </Typography></NavLink>
       <HeaderRoutes></HeaderRoutes>
     </div>
   );

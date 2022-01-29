@@ -9,11 +9,17 @@
   padding-right: 1%;
   padding-top: 1%;
   padding-bottom: 1%;
-  background-color: rgb(133, 255, 214);
+  background-color: #252424;
+ 
 }
 
-.header-button {
-  margin-right: 5px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 
+
+.header h2 {
+
+  color:white;
+}
+.header h2:hover {
+
+  color: #1ad1b9;
 }
