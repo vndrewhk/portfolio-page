@@ -1,5 +1,11 @@
-const Contact = ()=>{
-    return <>Contact Info</>
-}
+import styles from "./pages.module.css";
 
-export default Contact
+const Contact = () => {
+  return (
+    <div className={styles.main}>
+      <>Contact Info</>
+    </div>
+  );
+};
+
+export default Contact;
