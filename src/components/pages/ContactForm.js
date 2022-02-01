@@ -20,7 +20,7 @@ const ContactForm = () => {
     email: "",
     phone: "",
     message: "",
-    date: "",
+    createdOn: "",
   });
 
   const [nameFocused, setNameFocused] = useState(false);
@@ -48,6 +48,9 @@ const ContactForm = () => {
         console.log("Please enter a valid name!");
       }
     }
+    setMessageInfo((prevState) => {
+      return { ...prevState, name: nameTextRef.current.value };
+    });
   };
 
   const nameChangeHandler = () => {
@@ -63,6 +66,9 @@ const ContactForm = () => {
     if (!emailFocused) {
       setEmailFocused(true);
     }
+    setMessageInfo((prevState) => {
+      return { ...prevState, email: emailTextRef.current.value };
+    });
   };
 
   const phoneBlurHandler = () => {
@@ -72,6 +78,9 @@ const ContactForm = () => {
     if (!phoneFocused) {
       setPhoneFocused(true);
     }
+    setMessageInfo((prevState) => {
+      return { ...prevState, phone: phoneTextRef.current.value };
+    });
   };
 
   const messageChangeHandler = () => {
@@ -79,67 +88,40 @@ const ContactForm = () => {
       // if (nameTextRef.current.value.length === 0) {
       console.log("Please enter a valid name!");
     }
+    setMessageInfo((prevState) => {
+      return {
+        ...prevState,
+        message: messageTextRef.current.value,
+        createdOn: new Date(),
+      };
+    });
   };
 
   let { isLoading, success, sendRequest: sendMessageRequest } = useHttp();
 
   const enterMessageHandler = async (messageInfo) => {
+    console.log(isLoading);
+    console.log(success);
     sendMessageRequest({
       url: "https://portfolio-c6560-default-rtdb.firebaseio.com/contact.json",
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body:(messageInfo),
+      body: messageInfo,
     });
-    console.log("done");
+    // console.log("done");
+    console.log(isLoading);
+    console.log(success);
   };
 
   const submitContactHandler = (e) => {
     e.preventDefault();
 
-    // if (!isLoading) {
-    //   setSuccess(false);
-    //   setIsLoading(true);
-    // }
-
-    setMessageInfo({
-      name: nameTextRef.current.value,
-      email: emailTextRef.current.value,
-      phone: phoneTextRef.current.value,
-      message: messageTextRef.current.value,
-      createdOn: new Date(),
-    });
     enterMessageHandler(messageInfo);
+
   };
 
-  useEffect(() => {
-    console.log(messageInfo);
-  }, [messageInfo]);
-
-//   const testPost = async () => {
-//     try {
-//       const responseData = await fetch(
-//         "https://portfolio-c6560-default-rtdb.firebaseio.com/contact.json",
-//         {
-//           method: "POST",
-//           headers: {
-//             "Content-Type": "application/json",
-//           },
-//           body: JSON.stringify(messageInfo),
-//         }
-//       );
-//       console.log("success");
-//       if (!responseData.ok) {
-//         throw new Error("Something went wrong!");
-//       }
-
-//       const data = await responseData.json();
-//       console.log(data);
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
 
   return (
     <div className={styles["contact-info-box"]}>
@@ -208,13 +190,12 @@ const ContactForm = () => {
               multiline
               maxRows={10}
               inputRef={messageTextRef}
-              //   onChange={handleChange}
+              onChange={messageChangeHandler}
             />
             <Button variant="contained" onClick={submitContactHandler}>
               {/*   <FolderIcon className={styles["route-button"]} /> */}
               Submit
             </Button>
-            
           </form>
         </>
       )}

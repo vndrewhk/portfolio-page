@@ -8,24 +8,16 @@ const useHttp = () => {
     setIsLoading(true);
     setSuccess(false);
     try {
-      //   const responseData = await fetch(requestConfig.url, {
-      //     method: requestConfig.method,
-      //     headers: requestConfig.headers,
-      //     body: JSON.stringify(requestConfig.body),
-      //   });
-      //   console.log("success");
       const responseData = await fetch(requestConfig.url, {
         method: requestConfig.method,
         headers: requestConfig.headers,
         body: JSON.stringify(requestConfig.body),
       });
-      console.log("success");
+
       if (!responseData.ok) {
         setSuccess(false);
         throw new Error("Something went wrong!");
       }
-
-      //   const data = await responseData.json();
       setSuccess(true);
     } catch (err) {
       console.log(err);
