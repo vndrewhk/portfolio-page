@@ -28,7 +28,7 @@
 .paragraph {
   width: 25vw;
   text-align: left;
-
+  color:white;
   border-radius: 3px;
   background-color: #575757;
 }
