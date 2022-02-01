@@ -1,23 +1,26 @@
 import Button from "@mui/material/Button";
 import styles from "./header-routes.module.css";
-
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import FolderIcon from "@mui/icons-material/Folder";
 import { NavLink } from "react-router-dom";
 
 const HeaderRoutes = () => {
   return (
     <div>
-      <NavLink to="/Portfolio">
+      <NavLink className={styles["header-button"]} to="/Portfolio">
         <Button className={styles["header-button"]} variant="contained">
-          Portfolio
+          <FolderIcon className={styles["route-button"]} /> Portfolio
         </Button>
       </NavLink>
-      <NavLink to="/about-me">
+      <NavLink className={styles["header-button"]} to="/about-me">
         <Button className={styles["header-button"]} variant="contained">
-          About Me
+          <AccountCircleIcon className={styles["route-button"]} /> About Me
         </Button>
       </NavLink>
-      <NavLink to="contact">
+      <NavLink className={styles["header-button"]} to="contact">
         <Button className={styles["header-button"]} variant="contained">
+          <ConnectWithoutContactIcon className={styles["route-button"]} />{" "}
           Contact Me
         </Button>
       </NavLink>

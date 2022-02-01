@@ -1,0 +1,90 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  background-color: #313131;
+}
+
+.contact-info-box {
+  margin-top: 15px;
+  background-color: #252424;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin-bottom: 50px;
+}
+
+.contact-info-title {
+  align-self: center;
+  color: wheat;
+}
+
+.contact-info {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 50px;
+  /* padding-bottom: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.contact-info-divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.icon {
+  padding-left: 2px;
+  padding-right: 5px;
+  padding-top: 4px;
+}
+
+.icon,
+.contact-info-text {
+  vertical-align: middle;
+  display: inline-block;
+  color: white;
+}
+
+/* ---------------------- */
+
+.contact-form-message {
+  color: white;
+  display: flex;
+  align-self: center;
+
+  margin-top: 25px;
+}
+
+.contact-form-field {
+  display: flex;
+  flex-direction: column;
+  background-color: #b1fff5;
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.contact-form-info {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.contact-form-textbox {
+  display: flex;
+  /* align-self: center; */
+  justify-self: center;
+}

@@ -1,9 +1,11 @@
-import styles from "./pages.module.css";
-
+import styles from "./contact.module.css";
+import ContactForm from "./ContactForm";
+import ContactInfo from "./ContactInfo";
 const Contact = () => {
   return (
     <div className={styles.main}>
-      <>Contact Info</>
+      <ContactInfo></ContactInfo>
+      <ContactForm></ContactForm>
     </div>
   );
 };
