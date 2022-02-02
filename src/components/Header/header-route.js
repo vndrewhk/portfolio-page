@@ -18,7 +18,7 @@ const HeaderRoutes = () => {
           <AccountCircleIcon className={styles["route-button"]} /> About Me
         </Button>
       </NavLink>
-      <NavLink className={styles["header-button"]} to="contact">
+      <NavLink className={styles["header-button"]} to="/contact">
         <Button className={styles["header-button"]} variant="contained">
           <ConnectWithoutContactIcon className={styles["route-button"]} />{" "}
           Contact Me

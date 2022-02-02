@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: #313131;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.info-box{
+    background-color: #252424;
+    margin-top: 15px;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-self: center; */
+    align-items: center;
+}
+
+.info-header {
+  color: wheat;
+
+}
+
+.info-paragraph{
+    color:white;
+    width:70%;
+    margin-top: 25px;
+}

@@ -10,8 +10,7 @@ import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutli
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import { useEffect, useRef, useState } from "react";
-import { green } from "@mui/material/colors";
+import {useRef, useState } from "react";
 import useHttp from "../../hooks/use-http";
 
 const ContactForm = () => {
@@ -27,7 +26,7 @@ const ContactForm = () => {
 
   const [emailFocused, setEmailFocused] = useState(false);
   const [phoneFocused, setPhoneFocused] = useState(false);
-  const [messageFocused, setMessageFocused] = useState(false);
+//   const [messageFocused, setMessageFocused] = useState(false);
 
   const nameTextRef = useRef();
 
@@ -84,9 +83,8 @@ const ContactForm = () => {
   };
 
   const messageChangeHandler = () => {
-    if (messageFocused && nameTextRef.current.value.length === 0) {
-      // if (nameTextRef.current.value.length === 0) {
-      console.log("Please enter a valid name!");
+    if (messageTextRef.current.value.length === 0) {
+      console.log("Please enter a valid message!");
     }
     setMessageInfo((prevState) => {
       return {

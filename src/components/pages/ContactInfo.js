@@ -11,16 +11,16 @@ const ContactInfo = () => {
     <div className={styles["contact-info-box"]}>
       <Typography
         variant="p1"
-        component="h2"
+        component="h1"
         className={styles["contact-info-title"]}
       >
         <span className={styles.icon}>
           <ContactsIcon />
-        </span>{" "}
+        </span>
         <span>Contact Info</span>
       </Typography>
 
-{/* Probably better to use columns and align it in a row rather than what I did here... */}
+      {/* Probably better to use columns and align it in a row rather than what I did here... */}
       <div className={styles["contact-info"]}>
         <div className={styles["contact-info-divider"]}>
           <Typography variant="p1" component="p">
